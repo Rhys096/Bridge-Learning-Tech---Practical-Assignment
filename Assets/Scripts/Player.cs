@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
         if (Mathf.Abs(vert) > 0 || Mathf.Abs(hor) > 0)
         {
-            rb.AddForce(motion.normalized * delta, ForceMode.Force);
+            rb.AddForce(motion.normalized * delta * Time.deltaTime * 500f, ForceMode.Force);
         }
 
         //transform.Rotate()
