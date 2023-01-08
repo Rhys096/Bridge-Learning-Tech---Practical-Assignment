@@ -22,6 +22,7 @@ public class GameSetup : MonoBehaviour
     float topScore = 0;
     public int level = 1;
     int collected = 0;
+    int totalCollected = 0;
 
     Grid grid;
 
@@ -52,7 +53,7 @@ public class GameSetup : MonoBehaviour
 
     public void EndGame()
     {
-        SaveLoad.SaveAttempt((int) score, collected);
+        SaveLoad.SaveAttempt((int) score, totalCollected);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     void Start()
@@ -260,6 +261,7 @@ public class GameSetup : MonoBehaviour
             playerTransform.GetComponent<Renderer>().materials[0].color = color;
 
             collected++;
+            totalCollected++;
 
             GameObject text = Instantiate(textPrefab, null);
             text.GetComponentInChildren<TextAppear>().SetText("x" + pickupCombo.ToString(), color);
