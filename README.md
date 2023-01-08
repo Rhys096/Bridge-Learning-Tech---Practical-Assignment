@@ -1,4 +1,4 @@
-# Bridge Learning Tech - Practical Assignment (creating in 3 days)
+# Bridge Learning Tech - Practical Assignment (created in 3 days)
  
 ![](https://github.com/Rhys096/Bridge-Learning-Tech---Practical-Assignment/blob/main/game.png)
 
